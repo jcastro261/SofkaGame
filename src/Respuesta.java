@@ -9,9 +9,9 @@ public class Respuesta {
 		
 	}
 
-	public Respuesta(long idRespuesta, String respuesta, boolean estado) {
+	public Respuesta(String respuesta, boolean estado) {
 		super();
-		this.idRespuesta = idRespuesta;
+		
 		this.respuesta = respuesta;
 		this.estado = estado;
 	}

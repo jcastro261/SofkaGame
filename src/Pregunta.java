@@ -1,21 +1,25 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pregunta {
 
 	private long idPregunta;
 	private String pregunta;
-	private long idNivel;
+	private long nivelPregunta;
 	List<Respuesta> respuesta;
-	
+
 	public Pregunta() {
 		
+		this.respuesta= new ArrayList<>();
+
 	}
 
-	public Pregunta(long idPregunta, String pregunta, long idNivel) {
+	public Pregunta(String pregunta, long nivelPregunta) {
 		super();
-		this.idPregunta = idPregunta;
+
 		this.pregunta = pregunta;
-		this.idNivel = idNivel;
+		this.nivelPregunta = nivelPregunta;
+		this.respuesta= new ArrayList<>();
 	}
 
 	public long getIdPregunta() {
@@ -34,12 +38,23 @@ public class Pregunta {
 		this.pregunta = pregunta;
 	}
 
-	public long getIdNivel() {
-		return idNivel;
+	public long getNivelPregunta() {
+		return nivelPregunta;
 	}
 
-	public void setIdNivel(long idNivel) {
-		this.idNivel = idNivel;
+	public void setNivelPregunta(long nivelPregunta) {
+		this.nivelPregunta = nivelPregunta;
+	}
+
+	@Override
+	public String toString() {
+		return "Pregunta [pregunta=" + pregunta + ", nivelPregunta=" + nivelPregunta + "]";
+	}
+
+	public void agregarRespuesta(Respuesta res) {
+		
+		this.respuesta.add(res);
+
 	}
 
 }
